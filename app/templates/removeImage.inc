@@ -1,0 +1,1 @@
+<button type="submit" name="submit" value="delete">Удалить изображение</button>

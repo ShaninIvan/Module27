@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.4s;
+}
+
+button{
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: rgb(248, 147, 15);
+    color: white;
+    border: 2px solid rgb(194, 192, 192);
+    font-weight: 600;
+    height: 30px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a, a:link, a:active, a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+button:hover, .link-button:hover{
+    background-color: rgb(248, 108, 15);
+}
+
+.link-button{
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: rgb(248, 147, 15);
+    color: white;
+    border: 2px solid rgb(194, 192, 192);
+    font-weight: 600;
+    height: 30px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    padding: 0 60px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: wheat;
+}
+
+.header__logo{
+    font-size: 36px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.user-panel{
+    height: 90%;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-panel__controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.controls__inputs, .controls__buttons{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.controls__inputs{
+    margin-right: 15px;
+}
+
+.response{
+    color: slateblue;
+    animation: response 1s linear 1s forwards;
+}
+
+@keyframes response{
+    0%{
+        opacity: 1;
+    }100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+main{
+    width: 100%;
+    flex-basis: 90%;
+    padding: 20px;
+    background-color: seashell;
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+.gallery-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.image{
+    height: 200px;
+    margin-right: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    border: 2px solid gray;
+    background-color:  rgb(253, 224, 203);
+    
+}
+
+.image__caption{
+    text-align: center;
+}
+
+.image img{
+    position: relative;
+    height: 100%;
+    width: calc(100%-20px);
+    border: 2px solid gray;
+
+}
+
+footer{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+    background-color: wheat;
+}
+
+/* Страница UPLOAD */
+
+.upload-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.upload__inputs{
+    flex-basis: 50%;
+}
+
+.upload__rest ul{
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.upload__preview{
+    flex-basis: 50%;
+}
+
+/* Страница IMAGE */
+.viewing{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.viewing__image{
+    flex-basis: 50%;
+}
+
+.viewing__image img{
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.viewing__comments{
+    flex-basis: 50%;
+}
+
+.comments__block{
+    width: 90%;
+    height: 70%;
+    border: 1px solid black;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.comment{
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.comment:nth-child(even){
+    background-color: rgb(173, 250, 255);
+}
+
+.comment__author{
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.comment__body{
+    padding: 5px;
+    border: 1px dashed lightgray;
+}
+
+.comment__delete{
+    text-align: right;
+    color: red;
+    cursor: pointer;
+}
+
+.comment__delete:hover{
+    transform: translateX(-20px);
+}
+
+.commentID{
+    display: none;
+}
+
+#comment-area{
+    padding: 10px;
+    font-size: 14px;
+}
